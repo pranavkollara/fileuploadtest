@@ -119,6 +119,6 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 app.use("/tiff", express.static(path.join(__dirname, "tiff")));
 app.use("/B&Wimages", express.static(path.join(__dirname, "B&Wimages")));
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log("Server started on port 5000");
 });
